@@ -1,0 +1,146 @@
+@import 'breakpoints.scss';
+
+.svg-container{    
+    transform: scale(0.9);
+    max-width: 430px;
+    
+    #full-desk{
+    .st0{fill:#7F4403;}
+	.st1{fill:#350A01;}
+	.st2{fill:#B5431F;stroke:#350D02;stroke-width:0.75;stroke-miterlimit:10;}
+	.st3{fill: #ffffff;
+        animation: swim 6s ease-in infinite;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:#8E8686;}
+	.st6{fill:#1B439A;}
+	.st7{fill:#D2D5D6;}
+	.st8{fill:#938993;}
+	.st9{fill:#E2D3E2;}
+	.st10{fill:#FAFBFA;}
+	.st11{fill:#414343;}
+	.st12{fill:#0D1014;}
+	.st13{fill:#99D9E6;}
+	.st14{fill:#6A576D;}
+	.st15{fill:#3F93E8;stroke:#00A0E9;stroke-width:4;}
+	.st16{fill:none;stroke:#00A0E9;stroke-width:5;}
+    .st17{ fill:#f87a04;
+        transform: translate(0%, 5%);
+        animation: fog 6s ease-in-out infinite;}
+	.st18{fill:#5382A1;}
+    }
+
+    // react-svg animation
+    @keyframes react {
+        to {
+            transform:rotate(360deg)
+        }
+    }
+    // java-svg animation
+    @keyframes fog {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1
+        }
+        90%{
+
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            transform: translate(0, -4%);
+        }
+    }
+}
+// mysql animation
+@keyframes swim {
+    55% {
+        transform-origin: 50% 50%;
+        transform:translate(17%, -18%);
+    }
+    100% {
+        transform-origin: 50% 50%;
+        transform:translate(17%, -18%);
+    }
+
+}
+
+#name-svg {
+    width:130px;
+    @media screen and (max-width:map-get($breakpoints,'phone')) {
+        width:80px;
+    }
+    
+    animation: fillout 1000ms ease 1500ms infinite alternate-reverse;
+    
+    .st0 {
+        stroke: #FFFFFF;
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+        
+        animation: txt 2200ms ease infinite alternate-reverse;
+    }
+}
+
+// name-svg animation
+@keyframes txt {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillout {
+    from {
+        fill: transparent;
+    }
+    
+    to {
+        fill: whitesmoke;
+        
+    }
+}
+
+
+#menu-svg{
+    max-width: 4.5rem;
+    border: 2px solid rgb(156, 154, 154);
+    border-radius: 10%;
+    padding:0.3rem;
+    @media screen and (max-width:map-get($breakpoints,'phone')) {
+        width:3rem;
+    }
+    .st0{
+        fill:#ffffff;
+        
+    }
+}
+
+#line-svg{
+    width: 60px;
+    cursor: pointer;
+    .st0{fill:#FFFFFF;}
+	.st1{fill:#32B51C;}
+    transition: all 100ms ease-in;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+#github-svg{
+    width: 60px;
+    cursor: pointer;
+    .st0{fill:#FFFFFF;}
+    transition: all 100ms ease-in;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+#java-svg{
+    width:58px;
+    height:58px;
+	.st0{fill:#E76F00;}
+	.st1{fill:#5382A1;}
+}

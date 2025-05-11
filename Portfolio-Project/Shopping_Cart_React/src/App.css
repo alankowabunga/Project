@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Tektur:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM&family=Roboto:wght@300&display=swap');
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.brand {
+  font-family: 'Tektur', cursive;
+  min-width: 200px;
+  font-size: xx-large;
+}
+
+.divider {
+  min-height: 1.5vh;
+}
+
+.filter-icon {
+  cursor: pointer;
+  transition: all 700ms;
+  background-color: #f9f9f9;
+  transform: scale(1.2);
+  margin: .15rem;
+}
+
+.filter-icon:hover {
+  transform: translateX(-.5rem) scale(1.3);
+  box-shadow: 0 0 1.2rem rgb(205, 242, 247);
+  color: rgb(5, 98, 31);
+  background-color: #dcf2e4;
+}
+
+.badge {
+  font-size: .8rem !important;
+}
+
+.home-container {
+  margin: 0 !important;
+}
+
+.card {
+  margin: 0 !important;
+}
+
+.filter-tag {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0.8rem;
+  font-weight: bolder;
+}
+
+.filter-form {
+  max-width: 450px;
+  background-color: #fdf1d6;
+}
+
+.offcanvas-title {
+
+  font-family: 'Playfair Display', serif;
+  font-family: 'Tektur', cursive;
+}
+
+.rating-tag {
+  width: 100%;
+}
+
+.fast-icon {
+  position: absolute;
+  font-size: 2.2em;
+  right: 2%;
+  top: 1%;
+  cursor: crosshair;
+}
+
+.fast-text {
+  color: rgb(52, 175, 73) !important;
+  font-size: larger !important;
+  font-weight: bolder !important;
+}
+
+.cart-button {
+  position: relative;
+}
+
+.noStock {
+  transition: 500ms all;
+  filter: brightness(.85);
+  position: relative;
+  cursor: not-allowed;
+}
+
+.card.noStock::after {
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  background-image: url(../src/assets/sold_out.png);
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0;
+  transition: 1s all;
+  z-index: 10;
+}
+
+.card.noStock:hover::after {
+  opacity: 1;
+  top: 40%;
+  left: 20%;
+  width: 190px;
+  height: 190px;
+}
+
+.cart_image {
+  width: 55px;
+  height: 60px;
+}
+
+.dropdown-menu {
+  min-width: 330px !important;
+  transform: translateX(-67%);
+}
+
+.trash-icon {
+  transition: all 300ms;
+}
+
+.trash-icon:hover {
+  color: red;
+  animation: trash 300ms forwards;
+}
+
+@keyframes trash {
+  0% {}
+
+  30% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  75% {
+    transform: rotate(30deg);
+  }
+
+  85% {
+
+    transform: rotate(-20deg);
+  }
+
+  95% {
+
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+
+  }
+}
+
+.select-title {
+  margin: .5em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.checkout-image {
+  height: auto;
+  width: 100%;
+}
+
+.carousel-caption {
+  backdrop-filter: blur(4px);
+}
+
+.check-title {
+  font-family: 'REM', sans-serif;
+}
+
+.check-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.filter-title {
+  text-decoration: underline !important;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Tektur', cursive;
+}
