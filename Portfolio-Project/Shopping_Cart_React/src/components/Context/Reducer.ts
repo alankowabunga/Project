@@ -1,5 +1,4 @@
-// @ts-ignore
-// @ts-nocheck
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 
 
